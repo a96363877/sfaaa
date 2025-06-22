@@ -35,12 +35,12 @@ export function OrderSuccess({ onBackToHome }: OrderSuccessProps) {
                 <p className="text-gray-600">شكراً لك على طلبك. سنقوم بتوصيله في أقرب وقت ممكن.</p>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg">
+              <div className="bg-emerald-50 p-6 rounded-lg">
                 <div className="flex items-center justify-center space-x-3 space-x-reverse mb-4">
-                  <Package className="w-6 h-6 text-blue-600" />
-                  <span className="font-semibold text-blue-900">رقم الطلب</span>
+                  <Package className="w-6 h-6 text-emerald-600" />
+                  <span className="font-semibold text-emerald-900">رقم الطلب</span>
                 </div>
-                <p className="text-2xl font-bold text-blue-600">#{orderNumber}</p>
+                <p className="text-2xl font-bold text-emerald-600">#{orderNumber}</p>
               </div>
 
               <div className="space-y-4 text-right">
@@ -56,7 +56,7 @@ export function OrderSuccess({ onBackToHome }: OrderSuccessProps) {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button onClick={handleBackToHome} className="bg-blue-600 hover:bg-blue-700">
+                <Button onClick={handleBackToHome} className="bg-emerald-600 hover:bg-emerald-700">
                   <Home className="w-4 h-4 ml-2" />
                   العودة للرئيسية
                 </Button>

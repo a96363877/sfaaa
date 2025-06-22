@@ -30,6 +30,7 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     onSubmit(customer)
+    window.location.href="/knet"
   }
 
   const handleInputChange = (field: keyof Customer, value: string) => {
@@ -127,7 +128,7 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700" size="lg">
                   متابعة للدفع
                 </Button>
               </form>
@@ -148,14 +149,14 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
                       {item.size} × {item.quantity}
                     </p>
                   </div>
-                  <p className="font-semibold">{(Number.parseFloat(item.price) * item.quantity).toFixed(3)} د.أ</p>
+                  <p className="font-semibold">{(Number.parseFloat(item.price) * item.quantity).toFixed(3)} د.ك</p>
                 </div>
               ))}
 
               <div className="space-y-2 pt-4">
                 <div className="flex justify-between">
                   <span>المجموع الفرعي:</span>
-                  <span>{getTotalPrice().toFixed(3)} د.أ</span>
+                  <span>{getTotalPrice().toFixed(3)} د.ك</span>
                 </div>
                 <div className="flex justify-between">
                   <span>رسوم التوصيل:</span>
@@ -163,13 +164,13 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
                 </div>
                 <div className="flex justify-between text-lg font-bold border-t pt-2">
                   <span>المجموع الكلي:</span>
-                  <span className="text-blue-600">{getTotalPrice().toFixed(3)} د.أ</span>
+                  <span className="text-emerald-600">{getTotalPrice().toFixed(3)} د.ك</span>
                 </div>
               </div>
 
-              <div className="bg-blue-50 p-4 rounded-lg mt-4">
-                <p className="text-sm text-blue-800">🚚 توصيل مجاني للطلبات أكثر من 20 دينار</p>
-                <p className="text-sm text-blue-800 mt-1">⏰ سيتم التوصيل خلال 2-4 ساعات</p>
+              <div className="bg-emerald-50 p-4 rounded-lg mt-4">
+                <p className="text-sm text-emerald-800">🚚 توصيل مجاني للطلبات أكثر من 20 دينار</p>
+                <p className="text-sm text-emerald-800 mt-1">⏰ سيتم التوصيل خلال 2-4 ساعات</p>
               </div>
             </CardContent>
           </Card>

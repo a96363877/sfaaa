@@ -71,8 +71,8 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
                           </Button>
                         </div>
                         <div className="text-left">
-                          <p className="font-semibold text-blue-600">
-                            {(Number.parseFloat(item.price) * item.quantity).toFixed(3)} د.أ
+                          <p className="font-semibold text-emerald-600">
+                            {(Number.parseFloat(item.price) * item.quantity).toFixed(3)} د.ك
                           </p>
                           <Button
                             variant="ghost"
@@ -96,9 +96,9 @@ export function CartSidebar({ isOpen, onClose, onCheckout }: CartSidebarProps) {
             <div className="border-t p-4 space-y-4">
               <div className="flex justify-between items-center">
                 <span className="text-lg font-semibold">المجموع:</span>
-                <span className="text-xl font-bold text-blue-600">{getTotalPrice().toFixed(3)} د.أ</span>
+                <span className="text-xl font-bold text-emerald-600">{getTotalPrice().toFixed(3)} د.ك</span>
               </div>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg" onClick={onCheckout}>
+              <Button className="w-full bg-emerald-600 hover:bg-emerald-700" size="lg" onClick={onCheckout}>
                 إتمام الطلب
               </Button>
             </div>

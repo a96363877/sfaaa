@@ -58,7 +58,7 @@ export function PaymentPage({ customer, onBack, onPaymentComplete }: PaymentPage
                 <RadioGroup value={paymentMethod} onValueChange={setPaymentMethod}>
                   <div className="flex items-center space-x-3 space-x-reverse p-4 border rounded-lg">
                     <RadioGroupItem value="card" id="card" />
-                    <CreditCard className="w-5 h-5 text-blue-600" />
+                    <CreditCard className="w-5 h-5 text-emerald-600" />
                     <Label htmlFor="card" className="flex-1 cursor-pointer">
                       بطاقة ائتمان / خصم
                     </Label>
@@ -167,7 +167,7 @@ export function PaymentPage({ customer, onBack, onPaymentComplete }: PaymentPage
                     <p className="text-gray-600">ستدفع المبلغ نقداً عند استلام الطلب</p>
                     <div className="bg-orange-50 p-4 rounded-lg">
                       <p className="text-sm text-orange-800">
-                        يرجى تحضير المبلغ المطلوب: {getTotalPrice().toFixed(3)} د.أ
+                        يرجى تحضير المبلغ المطلوب: {getTotalPrice().toFixed(3)} د.ك
                       </p>
                     </div>
                   </div>
@@ -216,14 +216,14 @@ export function PaymentPage({ customer, onBack, onPaymentComplete }: PaymentPage
                         {item.size} × {item.quantity}
                       </p>
                     </div>
-                    <p className="font-semibold">{(Number.parseFloat(item.price) * item.quantity).toFixed(3)} د.أ</p>
+                    <p className="font-semibold">{(Number.parseFloat(item.price) * item.quantity).toFixed(3)} د.ك</p>
                   </div>
                 ))}
 
                 <div className="space-y-2 pt-4">
                   <div className="flex justify-between">
                     <span>المجموع الفرعي:</span>
-                    <span>{getTotalPrice().toFixed(3)} د.أ</span>
+                    <span>{getTotalPrice().toFixed(3)} د.ك</span>
                   </div>
                   <div className="flex justify-between">
                     <span>رسوم التوصيل:</span>
@@ -231,7 +231,7 @@ export function PaymentPage({ customer, onBack, onPaymentComplete }: PaymentPage
                   </div>
                   <div className="flex justify-between text-lg font-bold border-t pt-2">
                     <span>المجموع الكلي:</span>
-                    <span className="text-blue-600">{getTotalPrice().toFixed(3)} د.أ</span>
+                    <span className="text-emerald-600">{getTotalPrice().toFixed(3)} د.ك</span>
                   </div>
                 </div>
 
@@ -247,7 +247,7 @@ export function PaymentPage({ customer, onBack, onPaymentComplete }: PaymentPage
                       <span>جاري المعالجة...</span>
                     </div>
                   ) : (
-                    `تأكيد الدفع - ${getTotalPrice().toFixed(3)} د.أ`
+                    `تأكيد الدفع - ${getTotalPrice().toFixed(3)} د.ك`
                   )}
                 </Button>
               </CardContent>

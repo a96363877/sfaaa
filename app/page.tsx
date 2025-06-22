@@ -116,7 +116,7 @@ export default function Component() {
 
   const features = [
     {
-      icon: <Truck className="w-8 h-8 text-blue-600" />,
+      icon: <Truck className="w-8 h-8 text-emerald-600" />,
       title: "توصيل مجاني",
       description: "توصيل مجاني للطلبات أكثر من 20 دينار",
     },
@@ -192,16 +192,16 @@ export default function Component() {
               <div className="flex items-center space-x-6 space-x-reverse">
                 <div className="flex items-center space-x-2 space-x-reverse">
                   <Phone className="w-4 h-4" />
-                  <span>+962 6 123 4567</span>
+                  <span>+965 55 65 2255 </span>
                 </div>
                 <div className="flex items-center space-x-2 space-x-reverse">
                   <Mail className="w-4 h-4" />
-                  <span>info@waterstore.jo</span>
+                  <span>info@safastore.com</span>
                 </div>
               </div>
               <div className="flex items-center space-x-4 space-x-reverse">
-                <Facebook className="w-4 h-4 hover:text-blue-600 cursor-pointer transition-colors" />
-                <Twitter className="w-4 h-4 hover:text-blue-400 cursor-pointer transition-colors" />
+                <Facebook className="w-4 h-4 hover:text-emerald-600 cursor-pointer transition-colors" />
+                <Twitter className="w-4 h-4 hover:text-emerald-400 cursor-pointer transition-colors" />
                 <Instagram className="w-4 h-4 hover:text-pink-600 cursor-pointer transition-colors" />
               </div>
             </div>
@@ -210,21 +210,21 @@ export default function Component() {
           {/* Main Header */}
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-8 space-x-reverse">
-              <div className="text-2xl font-bold text-blue-600">مياه صافية</div>
-              <nav className="hidden lg:flex items-center space-x-8 space-x-reverse">
-                <a href="#" className="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">
+              <img src="1.png" alt="" width={85}/> 
+                          <nav className="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <a href="#" className="text-emerald-600 font-medium border-b-2 border-emerald-600 pb-1">
                   الرئيسية
                 </a>
-                <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a href="#" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
                   المنتجات
                 </a>
-                <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a href="#" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
                   العروض
                 </a>
-                <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a href="#" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
                   من نحن
                 </a>
-                <a href="#" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+                <a href="#" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors">
                   اتصل بنا
                 </a>
               </nav>
@@ -238,21 +238,20 @@ export default function Component() {
                   </Badge>
                 )}
               </Button>
-              <Button className="bg-blue-600 hover:bg-blue-700">تسجيل الدخول</Button>
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-l from-blue-50 via-white to-blue-50 py-20">
+      <section className="bg-gradient-to-l from-emerald-50 via-white to-emerald-50 py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">جودة عالية ✨</Badge>
+                <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100">جودة عالية ✨</Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  <span className="text-blue-600">عبوات</span> لكل مناسبة
+                  <span className="text-emerald-600">عبوات</span> لكل مناسبة
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   مياه عذبة ونقية للمناسبات الأساسية، معتمدة ومفحوصة طبياً لضمان أعلى معايير الجودة والسلامة
@@ -260,7 +259,7 @@ export default function Component() {
               </div>
 
               <div className="flex items-center space-x-6 space-x-reverse">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 text-lg">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 text-lg">
                   تسوق الآن
                 </Button>
                 <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
@@ -285,12 +284,12 @@ export default function Component() {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl transform rotate-6 opacity-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-purple-500 rounded-3xl transform rotate-6 opacity-10"></div>
               <Image
-                src="/hero-illustration.png"
+                src="/fotolia_60825350_arabic.png"
                 alt="Water bottles illustration"
-                width={600}
-                height={400}
+                width={1200}
+                height={900}
                 className="relative z-10 w-full h-auto rounded-2xl"
               />
             </div>
@@ -319,7 +318,7 @@ export default function Component() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 mb-4">منتجاتنا المميزة</Badge>
+            <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 mb-4">منتجاتنا المميزة</Badge>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">اختر من مجموعتنا المتنوعة</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               نوفر لك أفضل أنواع المياه بأحجام مختلفة لتناسب جميع احتياجاتك
@@ -352,7 +351,7 @@ export default function Component() {
 
                   <div className="p-6 space-y-4">
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      <h3 className="font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                         {product.name}
                       </h3>
                       <p className="text-sm text-gray-500">{product.size}</p>
@@ -374,7 +373,7 @@ export default function Component() {
 
                     <div className="space-y-2">
                       <div className="flex items-center justify-center space-x-2 space-x-reverse">
-                        <span className="text-2xl font-bold text-blue-600">{product.price}</span>
+                        <span className="text-2xl font-bold text-emerald-600">{product.price}</span>
                         <span className="text-sm text-gray-500">دينار</span>
                         {product.originalPrice && (
                           <span className="text-lg text-gray-400 line-through">{product.originalPrice}</span>
@@ -384,7 +383,7 @@ export default function Component() {
                     </div>
 
                     <Button
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold"
+                      className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-semibold"
                       disabled={!product.inStock}
                       onClick={() => handleAddToCart(product)}
                     >
@@ -403,13 +402,13 @@ export default function Component() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-blue-400">مياه صافية</h3>
+              <h3 className="text-2xl font-bold text-emerald-400">مياه صافية</h3>
               <p className="text-gray-400">
                 نحن نقدم أفضل أنواع المياه النقية والعذبة لعملائنا الكرام بأعلى معايير الجودة والسلامة.
               </p>
               <div className="flex items-center space-x-4 space-x-reverse">
-                <Facebook className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
-                <Twitter className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors" />
+                <Facebook className="w-6 h-6 hover:text-emerald-400 cursor-pointer transition-colors" />
+                <Twitter className="w-6 h-6 hover:text-emerald-400 cursor-pointer transition-colors" />
                 <Instagram className="w-6 h-6 hover:text-pink-400 cursor-pointer transition-colors" />
               </div>
             </div>
@@ -471,7 +470,7 @@ export default function Component() {
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center space-x-3 space-x-reverse">
                   <MapPin className="w-5 h-5" />
-                  <span>عمان، الأردن</span>
+                  <span>عمان، الكويت</span>
                 </div>
                 <div className="flex items-center space-x-3 space-x-reverse">
                   <Phone className="w-5 h-5" />
