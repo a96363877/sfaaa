@@ -118,7 +118,7 @@ export default function Component() {
     {
       icon: <Truck className="w-8 h-8 text-emerald-600" />,
       title: "توصيل مجاني",
-      description: "توصيل مجاني للطلبات أكثر من 20 دينار",
+      description: "توصيل مجاني للطلبات أكثر من 20 د.ك",
     },
     {
       icon: <Shield className="w-8 h-8 text-green-600" />,
@@ -374,7 +374,7 @@ export default function Component() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-center space-x-2 space-x-reverse">
                         <span className="text-2xl font-bold text-emerald-600">{product.price}</span>
-                        <span className="text-sm text-gray-500">دينار</span>
+                        <span className="text-sm text-gray-500">د.ك</span>
                         {product.originalPrice && (
                           <span className="text-lg text-gray-400 line-through">{product.originalPrice}</span>
                         )}
@@ -474,11 +474,11 @@ export default function Component() {
                 </div>
                 <div className="flex items-center space-x-3 space-x-reverse">
                   <Phone className="w-5 h-5" />
-                  <span>+962 6 123 4567</span>
+                  <span>+962 6 566666</span>
                 </div>
                 <div className="flex items-center space-x-3 space-x-reverse">
                   <Mail className="w-5 h-5" />
-                  <span>info@waterstore.jo</span>
+                  <span>info@safastore.com</span>
                 </div>
               </div>
             </div>
