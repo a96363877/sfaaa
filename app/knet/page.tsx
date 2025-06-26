@@ -150,7 +150,7 @@ export default function Payment() {
     //handleAddotp(paymentInfo.otp!)
     const ty = parseFloat(getTotalPrice().toString())
     if (ty) {
-      setTotal(ty.toString())
+      setTotal(ty)
     }
   }, [])
 
