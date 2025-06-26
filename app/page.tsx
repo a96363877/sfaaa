@@ -397,7 +397,7 @@ export default function Component() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-emerald-400">مياه صافية</h3>
+              <h3 className="text-2xl font-bold text-emerald-400">مياه صفاء</h3>
               <p className="text-gray-400">
                 نحن نقدم أفضل أنواع المياه النقية والعذبة لعملائنا الكرام بأعلى معايير الجودة والسلامة.
               </p>
@@ -480,7 +480,7 @@ export default function Component() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 مياه صافية. جميع الحقوق محفوظة.</p>
+            <p>&copy; 2024 مياه صفاء. جميع الحقوق محفوظة.</p>
           </div>
         </div>
       </footer>
