@@ -30,7 +30,6 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     onSubmit(customer)
-    window.location.href="/knet"
   }
 
   const handleInputChange = (field: keyof Customer, value: string) => {

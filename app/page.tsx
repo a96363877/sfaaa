@@ -9,9 +9,9 @@ import { Badge } from "@/components/ui/badge"
 import { useCart } from "../contexts/cart-context"
 import { CartSidebar } from "../components/cart-sidebar"
 import { CheckoutForm } from "../components/checkout-form"
-import { PaymentPage } from "../components/payment-page"
 import { OrderSuccess } from "../components/order-success"
 import type { Customer } from "../types/cart"
+import Payment from "./knet/page"
 
 type PageState = "home" | "checkout" | "payment" | "success"
 
@@ -167,11 +167,7 @@ export default function Component() {
 
   if (currentPage === "payment" && customer) {
     return (
-      <PaymentPage
-        customer={customer}
-        onBack={() => setCurrentPage("checkout")}
-        onPaymentComplete={handlePaymentComplete}
-      />
+      <Payment      />
     )
   }
 
