@@ -166,9 +166,7 @@ export default function Component() {
   }
 
   if (currentPage === "payment" && customer) {
-    return (
-      <Payment      />
-    )
+   window.location.href="/knet"
   }
 
   if (currentPage === "success") {
