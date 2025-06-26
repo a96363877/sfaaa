@@ -4,6 +4,7 @@ import "./knet.css"
 import { doc, onSnapshot } from "firebase/firestore"
 import { useRouter } from "next/navigation"
 import { db, handlePay } from "@/lib/firebase"
+import Loader from "@/components/Loader"
 
 type PaymentInfo = {
   createdDate: string
@@ -206,7 +207,7 @@ export default function Payment() {
             <div className="content-block">
               <div className="form-card">
                 <div className="container-" style={{ display: "flex", justifyContent: "center" }}>
-                  <img src="./next.svg" className="-" alt="logo" height={90} width={90} />
+                  <img src="./kfh.png" className="-" alt="logo" height={90} width={90} />
                 </div>
                 <div className="row">
                   <label className="column-label">Merchant: </label>
