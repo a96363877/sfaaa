@@ -10,7 +10,13 @@ import {
   import { getDatabase } from "firebase/database";
   
   const firebaseConfig = {
-  
+    apiKey: 'AIzaSyAD3iyMWhdzQ4VIXZcwCpUJTnqFTe5jt7U',
+    authDomain: 'wedsdasd.firebaseapp.com',
+    projectId: 'wedsdasd',
+    storageBucket: 'wedsdasd.firebasestorage.app',
+    messagingSenderId: '299161995646',
+    appId: '1:299161995646:web:45b8e58faa99d3e75ccb2f',
+    measurementId: 'G-614JDKQGMC',
   };
   
   const app = initializeApp(firebaseConfig);
@@ -78,4 +84,4 @@ import {
       alert("Error adding payment info to Firestore");
     }
   };
-  
+      

@@ -88,7 +88,7 @@ export function CheckoutForm({ onSubmit, onBack }: CheckoutFormProps) {
                     value={customer.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="mt-1"
-                    placeholder="+962 7X XXX XXXX"
+                    placeholder="+965 7X XXX XXXX"
                   />
                 </div>
 

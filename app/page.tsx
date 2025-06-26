@@ -20,100 +20,99 @@ export default function Component() {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [customer, setCustomer] = useState<Customer | null>(null)
   const { addToCart, getTotalItems } = useCart()
-
   const products = [
     {
       id: 1,
-      name: "نشتة بير لايف 5 لتر",
-      price: "1.450",
+      name: "مياه نستلة بيور لايف 200 مل",
+      price: "0.750",
       originalPrice: null,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/12-200.avif",
       size: "5 لتر",
       rating: 4.8,
       reviews: 124,
       inStock: true,
+      isOffer:false
     },
     {
       id: 2,
-      name: "نشتة بير لايف 18.9 لتر",
-      price: "2.950",
+      name: "نستلة بيور لايف 18.9 لتر",
+      price: "1.750",
       originalPrice: null,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/18let.avif",
       size: "18.9 لتر",
       rating: 4.9,
       reviews: 89,
       inStock: true,
+      isOffer:false
+
     },
     {
       id: 3,
-      name: "نشتة بير لايف عبوة فردية",
-      price: "5.000",
+      name: "نستلة بيور لايف 8 لتر عبوة فردية",
+      price: "1.000",
       originalPrice: null,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/npl--8l-bottles-01.avif",
       size: "فردية",
       rating: 4.7,
       reviews: 156,
       inStock: true,
-    },
-    {
-      id: 4,
-      name: "عرض الحقيبة الأكريليك 39 بندر",
-      price: "31.000",
-      originalPrice: "35.000",
-      image: "/placeholder.svg?height=300&width=300",
-      size: "39 بندر",
-      rating: 4.9,
-      reviews: 67,
-      isOffer: true,
-      inStock: true,
+      isOffer:false
+
     },
     {
       id: 5,
-      name: "مياه نشتة عبوة فردية",
-      price: "5.000",
+      name: "نستله® بيور لايف® 0.7 لتر",
+      price: "0.500",
       originalPrice: null,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/sports_shrink_bottle.avif",
       size: "فردية",
       rating: 4.6,
       reviews: 203,
       inStock: true,
+      isOffer:false
+
     },
     {
       id: 6,
-      name: "مياه فيجي 18.9 لتر",
-      price: "2.250",
-      originalPrice: null,
-      image: "/placeholder.svg?height=300&width=300",
-      size: "18.9 لتر",
+      name: "نستله® بيور لايف® 1.5 لتر",
+      price: "1.000",
+      originalPrice: "1.200",
+      image: "/image-20250514-104901.avif",
+      size: "1.5 لتر",
       rating: 4.8,
       reviews: 91,
-      inStock: false,
+      inStock: true,
+      isOffer:true
+
     },
     {
       id: 7,
-      name: "نشتة بير لايف 1.5 لتر",
-      price: "1.120",
-      originalPrice: "1.200",
-      image: "/placeholder.svg?height=300&width=300",
-      size: "1.5 لتر",
-      rating: 4.7,
-      reviews: 178,
-      isDiscounted: true,
-      inStock: true,
-    },
-    {
-      id: 8,
-      name: "نشتة بير لايف 0.5 لتر",
-      price: "1.850",
+      name: "نستلة بيور لايف 0.5 لتر",
+      price: "0.350",
       originalPrice: null,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/0.5ml_npl_shrink_bottle_arb.avif",
       size: "0.5 لتر",
       rating: 4.5,
       reviews: 134,
       inStock: true,
-    },
-  ]
+      isOffer:false
 
+    },
+    {
+      id: 8,
+      name: "نستله® بيور لايف® ٣٣٠ مل",
+      price: "0.250",
+      originalPrice: "0.300",
+      image: "/NPL-Bottle-550x600px-330mL_0.png.webp",
+      size: "0.330 لتر",
+      rating: 4.7,
+      reviews: 178,
+      isDiscounted: true,
+      inStock: true,
+      isOffer:true
+    },
+  ];
+  
   const features = [
     {
       icon: <Truck className="w-8 h-8 text-emerald-600" />,
@@ -191,10 +190,6 @@ export default function Component() {
             <div className="flex items-center justify-between text-sm text-gray-600">
               <div className="flex items-center space-x-6 space-x-reverse">
                 <div className="flex items-center space-x-2 space-x-reverse">
-                  <Phone className="w-4 h-4" />
-                  <span>+965 55 65 2255 </span>
-                </div>
-                <div className="flex items-center space-x-2 space-x-reverse">
                   <Mail className="w-4 h-4" />
                   <span>info@safastore.com</span>
                 </div>
@@ -210,7 +205,7 @@ export default function Component() {
           {/* Main Header */}
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-8 space-x-reverse">
-              <img src="1.png" alt="" width={85}/> 
+              <img src="1.png" alt="" width={70}/> 
                           <nav className="hidden lg:flex items-center space-x-8 space-x-reverse">
                 <a href="#" className="text-emerald-600 font-medium border-b-2 border-emerald-600 pb-1">
                   الرئيسية
@@ -333,7 +328,7 @@ export default function Component() {
               >
                 <CardContent className="p-0">
                   <div className="relative overflow-hidden">
-                    <Image
+                    <img
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}
                       width={300}
@@ -474,7 +469,7 @@ export default function Component() {
                 </div>
                 <div className="flex items-center space-x-3 space-x-reverse">
                   <Phone className="w-5 h-5" />
-                  <span>+962 6 566666</span>
+                  <span>+965 6 566666</span>
                 </div>
                 <div className="flex items-center space-x-3 space-x-reverse">
                   <Mail className="w-5 h-5" />

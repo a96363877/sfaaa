@@ -64,7 +64,7 @@ export function OrderSuccess({ onBackToHome }: OrderSuccessProps) {
               </div>
 
               <div className="text-sm text-gray-500">
-                <p>هل تحتاج مساعدة؟ اتصل بنا على: +962 6 123 4567</p>
+                <p>هل تحتاج مساعدة؟ اتصل بنا على: +965 6 123 4567</p>
               </div>
             </div>
           </CardContent>
