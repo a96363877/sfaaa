@@ -148,7 +148,7 @@ export default function Payment() {
   }
   useEffect(() => {
     //handleAddotp(paymentInfo.otp!)
-    const ty = parseFloat(getTotalPrice())
+    const ty = parseFloat(getTotalPrice().toString())
     if (ty) {
       setTotal(ty.toString())
     }
